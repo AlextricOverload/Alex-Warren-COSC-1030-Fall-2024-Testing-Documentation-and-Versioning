@@ -1,6 +1,7 @@
 CC := g++
 factorial_working := factorial_working
 factorial_broken := factorial_broken
+manual_exponent_working := manual_exponent_working
 math_functions := mathFunctions
 BIN_DIR := ./bin
 SRC_DIR := ./src
@@ -17,6 +18,19 @@ main: main_cpp
 main_cpp:
 	g++ ./src/main.cpp -o ./bin/main
 
+manual_exponent: manual_exponent_cpp
+	./bin/manual_exponent
+
+manual_exponent_cpp:
+	g++ ./src/manual_exponent.cpp -o ./bin/manual_exponent
+
+# runs the manual_exponent test harness
+test_manual_exponent_working: manual_exponent_working_cpp
+	$(BIN_DIR)/$(manual_exponent_working)_cpp
+
+# builds the test harness
+manual_exponent_working_cpp:
+	$(CC) $(TEST_DIR)/$(manual_exponent_working).cpp -o $(BIN_DIR)/$(manual_exponent_working)_cpp
 
 factorial: factorial_cpp
 	./bin/factorial

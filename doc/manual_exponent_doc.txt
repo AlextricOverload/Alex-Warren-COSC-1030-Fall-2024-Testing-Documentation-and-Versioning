@@ -1,0 +1,10 @@
+The project is intended to manually calculate the value of an exponential expression
+For example, when given 2 and 3, the function manually calculates:
+2 * 2 * 2
+
+To use the program:
+Step 1: Navigate to and open "Makefile"
+Step 2: Open terminal
+Step 3: type "make manual_exponent"
+Step 4: When prompted, enter base number
+Step 5: When prompted, enter exponential
